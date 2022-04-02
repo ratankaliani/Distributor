@@ -7,7 +7,8 @@ remappings = [
   "ds-test/=lib/ds-test/src/",
   "solmate/=lib/solmate/src/",
   "weird-erc20/=lib/solmate/lib/weird-erc20/src/",
-  "@openzeppelin/contracts=lib/openzeppelin-contracts/contracts"
+  "@openzeppelin/contracts=lib/openzeppelin-contracts/contracts",
+  "@chainlink/contracts=lib/node_modules/@chainlink/contracts"
 ]
 verbosity = 1
 
