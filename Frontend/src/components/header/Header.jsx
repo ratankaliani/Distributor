@@ -74,13 +74,12 @@ const Header = () => {
     <div className='header section__padding'>
       <div className="header-content">
         <div>
-          <h1>Discover, collect, and sell extraordinary NFTs</h1>
+          <h1>Deposit. Wait. Win NFTs for free.</h1>
           <img className='shake-vertical' src={coin} alt="" />
         </div>
       </div>
       <div className="header-slider">
-        <h1>Top Sellers</h1>
-       <Slider {...settings} className='slider'>
+       {/* <Slider {...settings} className='slider'>
             <div className='slider-card'>
               <p className='slider-card-number'>1</p>
               <div className="slider-img">
@@ -147,7 +146,7 @@ const Header = () => {
               </Link>
               <p className='slider-card-price'>3.548 <span>ETH</span></p>
             </div>
-        </Slider>
+        </Slider> */}
       </div>
     </div>
   )

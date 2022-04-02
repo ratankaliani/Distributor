@@ -6,8 +6,8 @@ import {  Link } from "react-router-dom";
 
 const Menu = () => (
   <>
-     <Link to="/"><p>Explore</p> </Link>
-     <p>My Items</p>
+     <Link to="/"><p>Explore Collection</p> </Link>
+     {/* <p>My Items</p> */}
     
   </>
  )
@@ -29,7 +29,7 @@ const Menu = () => (
         <div className="navbar-links_logo">
           <img src={logo} alt="logo" />
           <Link to="/"> 
-            <h1>CryptoKet</h1>
+            <h1>FreeMint</h1>
           </Link>
         </div>
         <div className="navbar-links_container">
@@ -41,22 +41,22 @@ const Menu = () => (
       </div>
       <div className="navbar-sign">
       {user ? (
-        <>
-         <Link to="/create"> 
-          <button type='button' className='primary-btn' >Create</button>
-        </Link>
-        <button type='button' className='secondary-btn'>Connect</button>
-        </>
-      ): (
-        <>
-        <Link to="/login"> 
-         <button type='button' className='primary-btn' onClick={handleLogin} >Sign In</button>
-        </Link>
-        <Link to="/register"> 
-          <button type='button' className='secondary-btn'>Sign Up</button>
-        </Link>
-        </>
-      )}
+              <>
+              <Link to="/create"> 
+                <button type='button' className='secondary-btn' >Connected</button>
+              </Link>
+              {/* <button type='button' className='secondary-btn'>Connect</button> */}
+              </>
+            ): (
+              <>
+              <Link to="/login"> 
+              <button type='button' className='primary-btn' onClick={handleLogin} >Connect</button>
+              </Link>
+              {/* <Link to="/register"> 
+                <button type='button' className='secondary-btn'>Connect</button>
+              </Link> */}
+              </>
+            )}
        
 
        
@@ -74,18 +74,18 @@ const Menu = () => (
             {user ? (
               <>
               <Link to="/create"> 
-                <button type='button' className='primary-btn' >Create</button>
+                <button type='button' className='secondary-btn' >Connected</button>
               </Link>
-              <button type='button' className='secondary-btn'>Connect</button>
+              {/* <button type='button' className='secondary-btn'>Connect</button> */}
               </>
             ): (
               <>
               <Link to="/login"> 
-              <button type='button' className='primary-btn' onClick={handleLogin} >Sign In</button>
+              <button type='button' className='primary-btn' onClick={handleLogin} >Connect</button>
               </Link>
-              <Link to="/register"> 
-                <button type='button' className='secondary-btn'>Sign Up</button>
-              </Link>
+              {/* <Link to="/register"> 
+                <button type='button' className='secondary-btn'>Connect</button>
+              </Link> */}
               </>
             )}
            
