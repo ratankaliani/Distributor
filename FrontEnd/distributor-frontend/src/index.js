@@ -5,11 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-<<<<<<< HEAD:FrontEnd/distrubutor-frontend/src/index.js
-    <NavBar/>,
-=======
     <App />,
->>>>>>> b4a0a747f56f9f229dec196f7266765adbfbfb9c:FrontEnd/distributor-frontend/src/index.js
   document.getElementById('root')
 );
 
