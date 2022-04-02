@@ -46,3 +46,8 @@ contract NFT is ERC721URIStorage {
     }
 
 }
+
+// mapping (tokenId => metaData) created first by NFT creators <<< 
+    // TASKS: 
+    // 1. create a function for NFT creators to enter metaData and push to the mapping 
+// mapping (owner => tokenIds[]) created after minting, shows proof of ownership

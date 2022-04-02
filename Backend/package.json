@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "@chainlink/contracts": "^0.4.0"
+    "@chainlink/contracts": "^0.4.0",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/material": "^5.5.3"
   }
 }
