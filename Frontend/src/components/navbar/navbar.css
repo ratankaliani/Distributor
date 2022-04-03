@@ -26,6 +26,9 @@
 }
 .navbar-links_logo img{
   margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
 }
 .navbar-links_container{
   display: flex;
