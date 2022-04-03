@@ -1,10 +1,6 @@
 import React from "react";
 import {useState, useEffect} from "react"
 import "./deposit.css";
-import nftlogo from "../../assets/logo.png";
-import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
-import { RiDiscordFill } from "react-icons/ri";
-import { FaTelegramPlane } from "react-icons/fa";
 import { ethers } from "ethers";
 import { useAtom } from "jotai";
 import { addrAtom } from "../../utils/atoms.js";
