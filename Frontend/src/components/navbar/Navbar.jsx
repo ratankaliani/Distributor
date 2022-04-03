@@ -7,15 +7,6 @@ import { ethers } from "ethers";
 import { useAtom } from "jotai"
 import { addrAtom } from "../../utils/atoms.js"
 
-// const Menu = () => (
-//   <>
-//     <Link to="/">
-//       <p>Explore Collection</p>{" "}
-//     </Link>
-//     {/* <p>My Items</p> */}
-//   </>
-// );
-
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [user, setUser] = useState(false);
@@ -54,13 +45,13 @@ const Navbar = () => {
       <div className="navbar-sign">
       {user ? (
               <>
-              <Link to="/create"> 
+              <Link to="/"> 
                 <button type='button' className='secondary-btn' >Connected</button>
               </Link>
               </>
             ): (
               <>
-              <Link to="/login"> 
+              <Link to="/"> 
               <button type='button' className='primary-btn' onClick={handleLogin} >Connect</button>
               </Link>
               </>
@@ -86,18 +77,17 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="navbar-menu_container scale-up-center">
             <div className="navbar-menu_container-links">
-             {/* <Menu /> */}
             </div>
             <div className="navbar-menu_container-links-sign">
             {user ? (
               <>
-              <Link to="/create"> 
+              <Link to="/"> 
                 <button type='button' className='secondary-btn' >Connected</button>
               </Link>
               </>
             ): (
               <>
-              <Link to="/login"> 
+              <Link to="/"> 
               <button type='button' className='primary-btn' onClick={handleLogin} >Connect</button>
               </Link>
               </>
