@@ -1,0 +1,74 @@
+
+.bonding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.bonding-content {
+    background: var(--color-bg);
+    width: 100%;
+    height: 300px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.bonding-content div {
+    display: flex;
+    flex-direction: row;
+}
+
+.bonding-content div h1 {
+    font-family: var(--font-family);
+    width: 100%;
+    font-weight: bold;
+    font-size: 180px;
+    line-height: 105.7%;
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 1rem;
+    margin-left: 2rem;
+  }
+  
+  .bonding-content div h2 {
+    font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 105.7%;
+    background: -webkit-linear-gradient(#EB1484, #f802f0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-top: 110px;
+  }
+
+  .yieldContainer {
+      width: 100%;
+  }
+
+  .bondingtitle {
+    font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 105.7%;
+    background: -webkit-linear-gradient(#EB1484, #f802f0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 215px;
+    padding: 20px;
+  }
