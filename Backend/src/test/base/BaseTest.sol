@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.4;
 
-import {DSTest} from "ds-test/test.sol";
+import {DSTest} from "../../../lib/ds-test/src/test.sol";
 
 import {VM} from "../utils/VM.sol";
 import {console} from "../utils/console.sol";
