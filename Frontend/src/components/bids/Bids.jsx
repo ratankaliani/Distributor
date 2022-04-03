@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './bids.css'
 import { AiFillHeart,AiOutlineHeart } from "react-icons/ai";
 
@@ -14,16 +14,20 @@ const images = ["https://gateway.pinata.cloud/ipfs/Qme3S2kFryHXZBcMF44jsJZd8Bshs
   "https://gateway.pinata.cloud/ipfs/Qme3S2kFryHXZBcMF44jsJZd8BshskxrBbY773NcwY6MVE/birds-10.jpeg"
 ];
 
-const Bids = ({title, wonNFTs}) => {
-
+function Bids(props) {
+  const [state, setState] = useState({wonNFTs: props.NFTs, title: "Your NFTs"}); 
+  
   // NOTE: replace [0, 2, 5] with contract result
+  useEffect(() => {
+    console.log(state.wonNFTs)
+  })
   return (
       <div className="bids-container">
         <div className="bids-container-text">
-          <h1>{title}</h1>
+          <h1>{state.title}</h1>
         </div>
         <div className="bids-container-card">
-          {wonNFTs.map(transferredIndex => (
+          {props.NFTs.map(transferredIndex => (
             <>
               <div className="card-column">
                 <div className="bids-card">

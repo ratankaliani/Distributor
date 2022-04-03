@@ -19,7 +19,7 @@
 
 .deposit-content div h1 {
   font-family: var(--font-family);
-  width: 70%;
+  width: 100%;
   font-weight: bold;
   font-size: 180px;
   line-height: 105.7%;
@@ -34,7 +34,7 @@
 
 .deposit-content div h2 {
   font-family: var(--font-family);
-  width: 70%;
+  width: 100%;
   font-weight: bold;
   font-size: 48px;
   line-height: 105.7%;
