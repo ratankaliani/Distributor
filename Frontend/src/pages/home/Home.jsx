@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import {Bids, Header, Deposit} from '../../components'
+import React, { useState, useEffect } from 'react';
+import {Bids, Header, Deposit, Withdraw, Bonding} from '../../components'
 import { ethers } from "ethers";
 import { useAtom } from "jotai";
 import { addrAtom } from "../../utils/atoms.js";
-import tokensTestnet from "../../utils/tokens.js"
+import tokensTestnet from "../../utils/tokens.js"; 
+import Countdown from "react-countdown"; 
 
 const Home = () => {
 
@@ -22,11 +23,17 @@ const Home = () => {
   // have read-only access to the Contract
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
+
+  function handleChange(NFTs) {
+    setState({...state, page: 3, wonNFTs: NFTs}); 
+
+  }
+
   useEffect(() => {
     const getState = async () => {
         try {
           const contState = await contract.getState();
-          setPage(contState);
+          setState({...state, page: contState});
         } catch(error) {
           console.log(error);
         }
@@ -36,18 +43,21 @@ const Home = () => {
 
   // Options are deposit, bond, withdraw, claim
 
-  const [page, setPage] = useSta;
-
+  const [state, setState] = useState({page: 0, depositEndTime: 0, bondingEndTime: 0, wonNFTs: []});
   return <div>
    <Header />
-    {page == 0 ? (<Deposit/>) : 
-    page == 1 ? (<></>) :
-    page == 2 ? (< Withdraw  />) :
+    {state.page == 0 ? (<Deposit endTime={state.depositEndTime}/>) : 
+    state.page == 1 ? (<Bonding endTime={state.bondingEndTime}/>) :
+    state.page == 2 ? (< Withdraw onChange={handleChange} />) :
+    (< Bids NFTs={state.wonNFTs}/>) } 
     <></>
-}
-
    
   </div>;
 };
 
 export default Home;
+
+/*
+1. Bond time clock + close deposit clock (logic for clock)
+2. When clock hits zero, switch pages 
+*/

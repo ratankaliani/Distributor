@@ -5,8 +5,9 @@ import { ethers } from "ethers";
 import { useAtom } from "jotai";
 import { addrAtom } from "../../utils/atoms.js";
 import tokensTestnet from "../../utils/tokens.js"
+import Countdown from "react-countdown";
 
-const Deposit = () => {
+const Deposit = (props) => {
   const [address, setAddress] = useAtom(addrAtom);
   const [amount, setAmount] = useState(0);
   const [token, setToken] = useState('');
@@ -62,7 +63,9 @@ const Deposit = () => {
     <>
       <div className="deposit-content">
         <div>
-          <h1 className="counter">02:59:22</h1>
+          <span className="counter">
+              <Countdown date={props.endTime}/>
+          </span>
           <h2>Time Left to Stake</h2>
         </div>
       </div>
