@@ -11,7 +11,7 @@ const Home = () => {
   return <div>
    <Header />
     {page == "deposit" ? (<Deposit/>) : 
-    page == "claim" ? (<Bids title="Collection"  />) :
+    page == "claim" ? (<Bids title="Collection" showAll={false}  />) :
     <></>
 }
 

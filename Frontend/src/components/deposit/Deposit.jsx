@@ -7,10 +7,10 @@ import { FaTelegramPlane } from "react-icons/fa";
 const Deposit = () => {
   return (
     <>
-    <div className="header-content">
+    <div className="deposit-content">
         <div>
-          <h1>02:59:22</h1>
-          <h1>Time Left to Stake</h1>
+          <h1 className="counter">02:59:22</h1>
+          <h2>Time Left to Stake</h2>
         </div>
       </div>
 
@@ -18,11 +18,11 @@ const Deposit = () => {
       <div className='footer section__padding'>
       <div className="footer-links">
         <div className="footer-links_logo">
-        <div>
+        <div className='stake'>
           <div className="header-slider">
           <div>
             <h1>Stake Now!</h1>
-            </div>
+          </div>
             </div>
             <input type="text" placeholder='ETH' />
             <button>Deposit</button>
@@ -31,12 +31,13 @@ const Deposit = () => {
       </div>
       
     </div>
-
-    <div className="header-content">
+    <div className="TVL-padding">
+    <div className="TVL-content">
     <div>
-          <h1>320 ETH</h1>
-          <h1>Vault Balance</h1>
+          <h1 className='shake-vertical'>320 ETH</h1>
+          <h2>TVL</h2>
         </div>
+      </div>
       </div>
       </>
   )

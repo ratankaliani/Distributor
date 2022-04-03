@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import nftlogo from '../../assets/logo.png'
+import nftlogo from '../../assets/mint.png'
 import { AiOutlineInstagram,AiOutlineTwitter, } from "react-icons/ai";
 import { RiDiscordFill } from "react-icons/ri";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-links_logo">
         <div>
           <img src={nftlogo} alt="logo" />
-          <p>CryptoKet</p>
+          <p>FreeMint</p>
         </div>
         <div>
           <h3>Get the lastes Updates</h3>
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         </div>
         <div className="footer-links_div">
-          <h4>CryptoKet</h4>
+          <h4>FreeMint</h4>
           <p>Explore</p>
           <p>How it Works</p>
           <p>Counters</p>
@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
       <div className="footer-copyright">
         <div>
-        <p> © {(new Date().getFullYear())} CrpytoKet, Inc. All Rights Reserved</p>
+        <p> © {(new Date().getFullYear())} FreeMint, Inc. All Rights Reserved</p>
         </div>
         <div>
           <AiOutlineInstagram size={25} color='white' className='footer-icon' />
