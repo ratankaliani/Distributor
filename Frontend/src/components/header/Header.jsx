@@ -12,6 +12,7 @@ import seller6 from '../../assets/seller6.jpg'
 import verify from '../../assets/verify.png'
 import coin from '../../assets/coin.png'
 import { Link  } from 'react-router-dom';
+
 const Header = () => {
   var settings = {
     dots: false,
@@ -70,6 +71,8 @@ const Header = () => {
       }
     ]
   };
+
+
   return (
     <div className='header section__padding'>
       <div className="header-content">
