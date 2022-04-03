@@ -22,6 +22,7 @@ contract FreeMintPool is Exponential {
     uint poolID;
     uint closeTime;
     uint bondTime;
+    uint8 initialized = 0;
     uint8 finalized = 0;
     uint timeStart;
 
@@ -68,8 +69,8 @@ contract FreeMintPool is Exponential {
         poolID = _poolID;
         organization = _organization;
         lendingPool = _lendingPool;
-        closeTime = block.timestamp + _timeToClose;
-        bondTime = closeTime + _bondPeriod;
+        closeTime = _timeToClose;
+        bondTime = _bondPeriod;
         baseURI = _baseURI; 
         postFixURI = _postFixURI; 
         freeMintNFTContract = new FreeMintNFT(_numNFTs);
@@ -90,7 +91,11 @@ contract FreeMintPool is Exponential {
      * @param amount the amount of token supplied, multipled by 10^18
      */
     function deposit(address asset, address lpAsset, uint amount) public {
-
+        if (initialized == 0) {
+            closeTime = block.timestamp + closeTime;
+            bondTime = closeTime + bondTime;
+            initialized = 1;
+        }
         require(block.timestamp < closeTime, "Time to close passed");
 
         // console.log(totalShares[lpAsset]);
@@ -151,6 +156,8 @@ contract FreeMintPool is Exponential {
      * @param lpAsset the ERC contract for the liquidity token
      */
     function withdraw(address asset, address lpAsset) public returns (uint256[] memory tokenIds){
+        require(block.timestamp >= bondTime, "Bond time not completed!");
+
         if (finalized == 0) {
             finalize(lpAsset);
         }
@@ -340,8 +347,6 @@ contract FreeMintPool is Exponential {
     * @param assetAddress the token contract address for the underlying token
     */
     function finalize(address assetAddress) internal {
-        require(block.timestamp >= bondTime, "Bond time not passed");
-
         // In future, need to finalizeAll for multiple assets
 
         // User shares
