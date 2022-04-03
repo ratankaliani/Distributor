@@ -6,12 +6,12 @@ import {Bids, Header, Deposit} from '../../components'
 const Home = () => {
   // Options are deposit, bond, withdraw, claim
 
-  const [page, setPage] = useState("deposit");
+  const [page, setPage] = useState("claim");
 
   return <div>
    <Header />
     {page == "deposit" ? (<Deposit/>) : 
-    page == "claim" ? (<Bids title="Collection"  />) :
+    page == "claim" ? (<Bids title="Collection" showAll={false}  />) :
     <></>
 }
 

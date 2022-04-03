@@ -4,13 +4,11 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.png'
 import {  Link } from "react-router-dom";
 
-const Menu = () => (
-  <>
-     <Link to="/"><p>Explore Collection</p> </Link>
-     {/* <p>My Items</p> */}
-    
-  </>
- )
+// const Menu = () => (
+//   <>
+//      <Link to="/"><p>Explore Collection</p> </Link>    
+//   </>
+//  )
 
  const Navbar = () => {
   const [toggleMenu,setToggleMenu] = useState(false)
@@ -34,7 +32,7 @@ const Menu = () => (
         </div>
         <div className="navbar-links_container">
           <input type="text" placeholder='Search Item Here' autoFocus={true} />
-         <Menu />
+         {/* <Menu /> */}
          {user && <Link to="/"><p onClick={handleLogout}>Logout</p></Link> }
         
         </div>
@@ -45,16 +43,12 @@ const Menu = () => (
               <Link to="/create"> 
                 <button type='button' className='secondary-btn' >Connected</button>
               </Link>
-              {/* <button type='button' className='secondary-btn'>Connect</button> */}
               </>
             ): (
               <>
               <Link to="/login"> 
               <button type='button' className='primary-btn' onClick={handleLogin} >Connect</button>
               </Link>
-              {/* <Link to="/register"> 
-                <button type='button' className='secondary-btn'>Connect</button>
-              </Link> */}
               </>
             )}
        
@@ -68,7 +62,7 @@ const Menu = () => (
         {toggleMenu && (
           <div className="navbar-menu_container scale-up-center" >
             <div className="navbar-menu_container-links">
-             <Menu />
+             {/* <Menu /> */}
             </div>
             <div className="navbar-menu_container-links-sign">
             {user ? (
@@ -76,16 +70,12 @@ const Menu = () => (
               <Link to="/create"> 
                 <button type='button' className='secondary-btn' >Connected</button>
               </Link>
-              {/* <button type='button' className='secondary-btn'>Connect</button> */}
               </>
             ): (
               <>
               <Link to="/login"> 
               <button type='button' className='primary-btn' onClick={handleLogin} >Connect</button>
               </Link>
-              {/* <Link to="/register"> 
-                <button type='button' className='secondary-btn'>Connect</button>
-              </Link> */}
               </>
             )}
            
