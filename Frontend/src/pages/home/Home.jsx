@@ -6,7 +6,7 @@ import {Bids, Header, Deposit} from '../../components'
 const Home = () => {
   // Options are deposit, bond, withdraw, claim
 
-  const [page, setPage] = useState("claim");
+  const [page, setPage] = useState("deposit");
 
   return <div>
    <Header />
